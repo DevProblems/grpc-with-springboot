@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>client-service</module>
+        <module>grpc-service</module>
+        <module>proto</module>
+    </modules>
+    <groupId>com.sarang.devproblems</groupId>
+    <artifactId>spring-boot-grpc</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>spring-boot-grpc</name>
+    <description>Demo Project of gRPC in Spring boot</description>
+    <developers>
+        <developer>
+            <name>A Sarang Kumar Tak</name>
+            <email>sarangdevproblems@gmail.com</email>
+            <url>hhttps://www.linkedin.com/in/sarang-kumar-tak-1454ba111/</url>
+            <organization>Youtube</organization>
+            <organizationUrl>https://www.youtube.com/channel/UCVno4tMHEXietE3aUTodaZQ</organizationUrl>
+        </developer>
+    </developers>
+</project>

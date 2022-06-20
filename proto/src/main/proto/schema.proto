@@ -1,0 +1,45 @@
+/**
+ * @author Dev Problems(A Sarang Kumar Tak)
+ * @YoutubeChannel https://www.youtube.com/channel/UCVno4tMHEXietE3aUTodaZQ
+ */
+syntax = "proto3";
+
+option java_multiple_files = true;
+
+package com.devProblems;
+
+message Book {
+  int32 book_id = 1;
+  string title = 2;
+  float price = 3;
+  int32 pages = 4;
+  int32 author_id = 5;
+}
+
+message Author {
+  int32 author_id = 1;
+  string first_name = 2;
+  string last_name = 3;
+  string gender = 4;
+  int32 book_id = 5;
+}
+
+
+service BookAuthorService {
+
+  //unary - synchronous
+  //client will send one request and server will respond with one response.
+  rpc getAuthor(Author) returns(Author){}
+
+  //sever streaming - Asynchronous
+  //client will send one request and server will send stream of response to the client.
+  rpc getBooksByAuthor(Author) returns(stream Book){}
+
+  //client streaming - Asynchronous
+  //client will stream of request and server will respond with one response.
+  rpc getExpensiveBook(stream Book) returns(Book){}
+
+  //bi-directional streaming - Asynchronous
+  //client will send stream of request and server will respond with stream of response.
+  rpc getBooksByGender(stream Book) returns (stream Book) {}
+}
